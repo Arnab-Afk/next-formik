@@ -1,13 +1,10 @@
-import Form from "../../components/form";
-
+'use client';
+import SignInForm from "../components/signup";
+import { useRouter } from "next/router";
 const HomePage = () => {
+  const router=useRouter();
   return (
-    <div className="container max-w-[600px] mx-auto">
-      <h1 className="mb-8 border-b border-gray-400 border-dashed py-10 font-semibold text-3xl">
-        Next.js Formik x Yup
-      </h1>
-      <Form />
-    </div>
+    <SignInForm  router={router}/>
   );
 };
 

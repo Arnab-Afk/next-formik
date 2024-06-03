@@ -1,10 +1,13 @@
-'use client';
-import Form from "../components/form";
+'use-client';
+import { useRouter } from 'next/navigation';
+import SignInForm from '../components/signup';
 
-const HomePage = () => {
+export default function Home() {
+  const router = useRouter();
+
   return (
-      <Form />
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <SignInForm router={router} />
+    </div>
   );
-};
-
-export default HomePage;
+}
